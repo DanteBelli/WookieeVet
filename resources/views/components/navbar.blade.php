@@ -1,4 +1,5 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="{{ url('/') }}">WookieeVet</a>
@@ -14,4 +15,5 @@
       <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
     </ul>
   </div>
+  </nav>
 </nav>
