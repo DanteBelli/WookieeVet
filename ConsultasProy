@@ -4,3 +4,4 @@
 3)Consultar si el modelo es correcto
 Consultar si los datos extra del usuario , se agregan a la tabla user o se crea una tabla nueva con una relacion con esta misma
 4)Consultar Beneficios AgregarLiveWire
+5)consultar datos extra del usuario si los agrego a la tabla actual de users , o hago otra con una relacion con esta misma

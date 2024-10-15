@@ -5,8 +5,9 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{ url(path: '/') }}">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Especialidades</a></li>
+      <li><a href="#">Preguntas Frecuentes</a></li>
+      <li><a href="#">Precios</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Registrar</a></li>

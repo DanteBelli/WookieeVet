@@ -57,6 +57,33 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
+
+        <!-- Tipos de Animal -->
+        <div class="container my-5">
+            <h2 class="text-center text-uppercase mb-4 text-black">Tipos de Animales</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-cat fa-5x text-black"></i>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-dog fa-5x text-black"></i>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-fish fa-5x text-black"></i>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-crow fa-5x text-black"></i>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-paw fa-5x text-black"></i>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <i class="fas fa-hippo fa-5x text-black"></i>
+                    </div>
+                </div>
+            </div>
         @include('components.footer')
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>     

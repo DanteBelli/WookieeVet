@@ -1,8 +1,8 @@
 <div class="container my-5">
   <footer class="text-center text-white" style="background-color: black">
     <div class="container">
-      <section class="mt-5">
-        <div class="row text-center d-flex justify-content-center pt-5">
+      <section class=" text-center mt-5">
+        <div class="row text-center d-flex justify-content-center mt-5">
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-white">Conocenos</a>
