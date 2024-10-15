@@ -20,11 +20,6 @@
           </div>
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-white">Home</a>
-            </h6>
-          </div>
-          <div class="col-md-2">
-            <h6 class="text-uppercase font-weight-bold">
               <a href="#!" class="text-white">Contacto</a>
             </h6>
           </div>
@@ -44,10 +39,31 @@
           </div>
         </div>
       </section>
-      <!-- Section: Text -->
-
-      <!-- Section: Social -->
+    <!-- Section: Social -->
       <section class="text-center mb-5">
         <a href="" class="text-white me-4">
           <i class="fab fa-facebook-f"></i>
         </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </section>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">© 2024 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">WookieeVet</a>
+    </div>
+  </footer>
+</div>
