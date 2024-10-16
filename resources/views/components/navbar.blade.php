@@ -6,7 +6,13 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{ url(path: '/') }}">Home</a></li>
-      <li><a href="#">Especialidades</a></li>
+      <li class="dropdownd">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Especialidades <span class="caret"></span></a>
+        <ul class="dropdown-menu" style="background-color: black; color: white;">
+          <li><a href="#">Radiologia</a></li>
+          <li><a href="#">Cirugía</a></li>
+          <li><a href="#">Nutrición</a></li>
+        </ul>
       <li><a href="#">Preguntas Frecuentes</a></li>
       <li><a href="#">Precios</a></li>
     </ul>
