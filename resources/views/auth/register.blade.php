@@ -9,13 +9,34 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
-        <!-- Email Address -->
+         <!-- Apellido -->
+         <div class="mt-4">
+            <x-input-label for="apellido" :value="__('Apellido')" />
+            <x-text-input id="apellido" class="block mt-1 w-full" type="name" name="apellido" :value="old('apellido')" required autocomplete="name" />
+            <x-input-error :messages="$errors->get('apellido')" class="mt-2" />
+        </div>
+
+        <!-- DNI -->
         <div class="mt-4">
+            <x-input-label for="dni" :value="__('Dni')" />
+            <x-text-input id="dni" class="block mt-1 w-full" type="number" name="dni" :value="old('dni')" required autocomplete="num" />
+            <x-input-error :messages="$errors->get('dni')" class="mt-2" />
+        </div>
+
+         <!-- Telefono -->
+         <div class="mt-4">
+            <x-input-label for="telefono" :value="__('Telefono')" />
+            <x-text-input id="telefono" class="block mt-1 w-full" type="number" name="telefono" :value="old('telefono')" required autocomplete="tel" />
+            <x-input-error :messages="$errors->get('telefono')" class="mt-2" />
+        </div>
+        
+         <!-- Email Address -->
+         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
-
+        
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Contraseña')" />
