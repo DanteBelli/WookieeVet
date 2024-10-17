@@ -22,7 +22,21 @@
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
-
+        <div>
+            <x-input-label for="apellido" :value="__('Apellido')" />
+            <x-text-input id="apellido" name="apellido" type="text" class="mt-1 block w-full" :value="old('apellido', $user->apellido)" required autofocus autocomplete="apellido" />
+            <x-input-error class="mt-2" :messages="$errors->get('apellido')" />
+        </div>
+        <div>
+            <x-input-label for="dni" :value="__('Dni')" />
+            <x-text-input id="dni" name="dni" type="number" class="mt-1 block w-full" :value="old('dni', $user->dni)" required autofocus autocomplete="dni" />
+            <x-input-error class="mt-2" :messages="$errors->get('dni')" />
+        </div>
+        <div>
+            <x-input-label for="telefono" :value="__('Telefono')" />
+            <x-text-input id="telefono" name="telefono" type="number" class="mt-1 block w-full" :value="old('telefono', $user->telefono)" required autofocus autocomplete="telefono" />
+            <x-input-error class="mt-2" :messages="$errors->get('telefono')" />
+        </div>
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
