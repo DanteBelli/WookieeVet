@@ -12,15 +12,12 @@
                 @case(1)
                     <p class="text-white">Administrador</p>
                     @break
-
                 @case(2)
                     <p class="text-white">Cliente</p>
                     @break
-
                 @case(3)
                     <p class="text-white">Veterinario</p>
                     @break
-
                 @default
                     <p class="text-white">Cliente</p>
             @endswitch
