@@ -14,6 +14,7 @@
                     @break
                 @case(2)
                     <p class="text-white">Cliente</p>
+                    @include('mascota.registerMascota')
                     @break
                 @case(3)
                     <p class="text-white">Veterinario</p>
