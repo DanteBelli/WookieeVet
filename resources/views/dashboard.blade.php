@@ -10,11 +10,11 @@
             @endphp
             @switch($rolId)
                 @case(1)
-                    <p class="text-white">Administrador</p>
+                    <p class="text-white">Administrador</p>        
                     @break
                 @case(2)
                     <p class="text-white">Cliente</p>
-                    @include('mascota.registerMascota')
+                    @include('mascotas.create')
                     @break
                 @case(3)
                     <p class="text-white">Veterinario</p>
