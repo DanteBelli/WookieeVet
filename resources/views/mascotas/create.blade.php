@@ -11,15 +11,22 @@
          <!-- Peso -->
          <div class="mt-4">
             <x-input-label for="peso" :value="__('Peso')" />
-            <x-text-input id="peso" class="block mt-1 w-full" type="double" name="peso" :value="old('peso')" required autocomplete="peso" />
+            <x-text-input id="peso" class="block mt-1 w-full" type="float" name="peso" :value="old('peso')" required autocomplete="peso" />
             <x-input-error :messages="$errors->get('peso')" class="mt-2" />
         </div>
 
         <!-- TipoMascota -->
         <div class="mt-4">
-            <x-input-label for="tipo" :value="__('Tipo')" />
-            <x-text-input id="tipo" class="block mt-1 w-full" type="text" name="tipo" :value="old('tipo')" required autocomplete="tipo" />
-            <x-input-error :messages="$errors->get('razas_id')" class="mt-2" />
+            <x-input-label for="tipo_id" :value="__('Tipo')" />
+            <select id="tipo_id" name="tipo_id" class="form-control mt-1 w-full" required>
+                <option value="">Seleccione un tipo</option>
+                @foreach($tipos as $tipo)
+                    <option value="{{ $tipo->id }}">{{ $tipo->nombre }}</option>
+                @endforeach
+            </select>
+            <x-input-error :messages="$errors->get('tipo_id')" class="mt-2" />
+        </div>
+
         </div>
 
          <!-- Razas -->
