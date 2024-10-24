@@ -11,13 +11,11 @@ class MascotaController extends Controller
     public function create(){
         // Traigo todos los tipos de mascota para que el usuario elija una y luego con esa data le cargo las razas de ese tipo
         $tipos  = Tipo_Mascota::all();
-       //probando donde esta el erro
-        dd($tipos);
         return view('mascotas.create', compact('tipos'));
     }
     public function getRazaPorTipo($tipos)
     {
-        $razas = Raza::where('tipo__mascotas_id' ,$tipos) ->get();
+        $razas = Raza::where('tipo_mascotas_id', $tipos)->get();
         return response()->json($razas);
     }
 
@@ -25,11 +23,13 @@ class MascotaController extends Controller
     {
         $request->validate([
             'nombre'=>'required|string|max:100',
-            'peso'=>'required|max:20',
-            'users_id'=>'required|integer',
+            'peso'=>'required|numeric|max:20',
+            'tipo_id'=>'required|integer',
             'razas_id'=>'required|integer',
         ]);
-        Mascota::create($request->all());
+        $data = $request->all();
+        $data['users_id'] = auth()->id();
+        Mascota::create($data);
         return redirect()->route('mascotas.create')->with('sucess','Mascota agregada con exito');
         
     }

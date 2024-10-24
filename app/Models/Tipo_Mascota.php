@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Tipo_Mascota extends Model
 {
     //probando solucionar error
-    protected $table = 'tipo__mascotas';
-    protected $filable = ['nombre'];
+        protected $filable = ['nombre'];
 }

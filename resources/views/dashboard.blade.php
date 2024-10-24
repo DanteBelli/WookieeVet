@@ -13,8 +13,7 @@
                     <p class="text-white">Administrador</p>        
                     @break
                 @case(2)
-                    <p class="text-white">Cliente</p>
-                    @include('mascotas.create')
+                    <a href="{{ route('mascotas.create') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Agregar Mascota
                     @break
                 @case(3)
                     <p class="text-white">Veterinario</p>

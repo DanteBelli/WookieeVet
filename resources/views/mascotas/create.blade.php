@@ -11,7 +11,7 @@
          <!-- Peso -->
          <div class="mt-4">
             <x-input-label for="peso" :value="__('Peso')" />
-            <x-text-input id="peso" class="block mt-1 w-full" type="float" name="peso" :value="old('peso')" required autocomplete="peso" />
+            <x-text-input id="peso" class="block mt-1 w-full" type="number" name="peso" step="0.01" :value="old('peso')" required autocomplete="peso" />
             <x-input-error :messages="$errors->get('peso')" class="mt-2" />
         </div>
 
@@ -31,7 +31,7 @@
 
          <!-- Razas -->
          <div class="mt-4">
-            <x-input-label for="raza" :value="__('Razas')" />
+            <x-input-label for="razas_id" :value="__('Razas')" />
             <x-text-input id="razas_id" class="block mt-1 w-full" type="text" name="razas_id" :value="old('razas_id')" required autocomplete="razas" />
             <x-input-error :messages="$errors->get('razas_id')" class="mt-2" />
         </div>

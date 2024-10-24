@@ -20,7 +20,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('apellido');
-            
             $table->integer('dni');
             $table->integer('telefono');
         });

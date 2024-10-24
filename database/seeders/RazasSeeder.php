@@ -24,5 +24,11 @@ class RazasSeeder extends Seeder
                 'observaciones' => 'Pati corto',
                 'tipo__mascotas_id' => '3',
             ]);
+            $raza4 = Raza::create([
+                'nombre' =>'Golden',
+                'observaciones' => 'Le gusta el agua',
+                'tipo__mascotas_id' => '1',
+            ]);
+            
     }
 }
