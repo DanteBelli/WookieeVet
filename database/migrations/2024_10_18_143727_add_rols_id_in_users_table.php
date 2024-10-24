@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->unsignedBigInteger('rols_id')->default(2)->change();
+            $table->foreign('rols_id')->references('id')->on('rols')->onDelete('cascade'); 
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedBigInteger('rols_id')->default(0)->change();
+
         });
     }
 };
