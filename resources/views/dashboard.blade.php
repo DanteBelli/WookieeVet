@@ -14,6 +14,8 @@
                     @break
                 @case(2)
                     <a href="{{ route('mascotas.create') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Agregar Mascota
+                    <br>
+                    <a href="{{ route('mascotas.edit') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Edotar Mascota
                     @break
                 @case(3)
                     <p class="text-white">Veterinario</p>

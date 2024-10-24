@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <form method="POST" action="{{ route('mascotas.store') }}">
         @csrf
         <!-- Name -->
@@ -61,4 +61,4 @@
             }
         });
     </script>
-</x-guest-layout>
+</x-app-layout>

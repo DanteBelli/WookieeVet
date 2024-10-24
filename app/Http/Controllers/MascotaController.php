@@ -33,4 +33,8 @@ class MascotaController extends Controller
         return redirect()->route('mascotas.create')->with('sucess','Mascota agregada con exito');
         
     }
+    public function edit()
+    {
+        return view('mascotas.edit');
+    }
 }
