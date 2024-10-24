@@ -32,3 +32,4 @@ Route::get('dashboard/mascotas/create',[MascotaController::class,'create'])->nam
 Route::post('dashboard/mascotas',[MascotaController::class,'store'])->name('mascotas.store');
 require __DIR__.'/auth.php';
 Route::get('mascotas/create', [MascotaController::class, 'create'])->name('mascotas.create');
+Route::get('/mascotas/create/getRazaPorTipo/{tipos}', [MascotaController::class, 'getRazaPorTipo']);

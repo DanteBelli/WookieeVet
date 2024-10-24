@@ -15,7 +15,7 @@ class MascotaController extends Controller
     }
     public function getRazaPorTipo($tipos)
     {
-        $razas = Raza::where('tipo_mascotas_id', $tipos)->get();
+        $razas = Raza::where('tipo__mascotas_id', $tipos)->get();
         return response()->json($razas);
     }
 
