@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::table('mascotas', function (Blueprint $table) {
             //
-            $table->string('nombre');
             $table->float('peso');
             $table->unsignedBigInteger('users_id')->constrained(); 
             $table->unsignedBigInteger('razas_id')->constrained();
