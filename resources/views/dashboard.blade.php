@@ -10,8 +10,8 @@
             @endphp
             @switch($rolId)
                 @case(1)
-                    <p class="text-white">Administrador</p>        
-                    @break
+                <a href="{{ route('administrador.mainAdm') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Editar Usuarios</a>
+                @break
                 @case(2)
                     <a href="{{ route('mascotas.create') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Agregar Mascota
                     <br>

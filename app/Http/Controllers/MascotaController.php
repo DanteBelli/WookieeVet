@@ -50,11 +50,9 @@ class MascotaController extends Controller
         $request->validate([
             'nombre'=>'required|string|max:50',
             'peso'=>'required|numeric|max:10',
-            'tipo_id'=>'required|integer',
-            'raza_id'=>'required|integer',
         ]);
         $mascota = Mascota::findOrFail($id);
-        $mascota->update($request->all());
+        $mascota->update($request->only(['nombre','peso']));
         return redirect()->route('dashboard')->with('','Mascota editada');
     }
     }
