@@ -5,6 +5,7 @@ use App\Models\Mascota;
 use App\Models\Raza;
 use App\Models\Tipo_Mascota;
 use Illuminate\Http\Request;
+use View;
 
 class MascotaController extends Controller
 {
@@ -33,8 +34,27 @@ class MascotaController extends Controller
         return redirect()->route('mascotas.create')->with('sucess','Mascota agregada con exito');
         
     }
-    public function edit()
+    public function editSelection()
     {
-        return view('mascotas.edit');
+        $mascotas = Mascota::where('users_id' , auth()->id())->get();
+        return view('mascotas.edit' , compact('mascotas'));
     }
-}
+    public function edit($id)
+    {
+        $mascota = Mascota::findOrFail($id);
+        $tipos = Tipo_Mascota::all();
+        return view('mascotas.editForm', compact('mascota','tipos'));
+    }
+    public function update(Request $request,$id)
+    {
+        $request->validate([
+            'nombre'=>'required|string|max:50',
+            'peso'=>'required|numeric|max:10',
+            'tipo_id'=>'required|integer',
+            'raza_id'=>'required|integer',
+        ]);
+        $mascota = Mascota::findOrFail($id);
+        $mascota->update($request->all());
+        return redirect()->route('dashboard')->with('','Mascota editada');
+    }
+    }
