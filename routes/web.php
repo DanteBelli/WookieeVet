@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 //Main
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -49,3 +50,6 @@ Route::patch('mascotas/{id}',[MascotaController::class,'update'])->name('mascota
 Route::get('/administrador/mainAdm', function () {
     return view('administrador.mainAdm');
 })->name('administrador.mainAdm');
+Route::middleware(['auth'])->group(function(){
+    Route::get('/administrador/mainAdm',[ProfileController::class,'index'])->name('admin.users');
+});
