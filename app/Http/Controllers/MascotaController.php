@@ -49,7 +49,7 @@ class MascotaController extends Controller
     {
         $request->validate([
             'nombre'=>'required|string|max:50',
-            'peso'=>'required|numeric|max:10',
+            'peso'=>'required|numeric|max:100',
         ]);
         $mascota = Mascota::findOrFail($id);
         $mascota->update($request->only(['nombre','peso']));

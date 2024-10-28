@@ -1,11 +1,36 @@
 <x-app-layout>
-    <table>Lista de Usuarios</table>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        thead {
+            background-color: #007BFF; /* Color del encabezado */
+            color: white;
+        }
+        h1{
+            color: white;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr {
+            background-color: #f2f2f2; /* Color de filas alternas */
+        }
+        tbody tr:hover {
+            background-color: #e7f1ff; /* Efecto hover */
+        }
+    </style>
+    <h1>Lista de Usuarios</h1>
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Email</th>
-                <th>Rold</th>
+                <th>Rol</th>
             </tr>
         </thead>
         <tbody>

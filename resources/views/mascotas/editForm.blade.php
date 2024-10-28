@@ -13,7 +13,7 @@
         </div>
         <div>
             <x-input-label for="peso" :value="__('Peso')" />
-            <x-text-input id="peso" name="peso" type="number" class="mt-1 block w-full" :value="old('peso', $mascota->peso)" required autofocus autocomplete="apellido" />
+            <x-text-input id="peso" name="peso" type="number" class="mt-1 block w-full" :value="old('peso', $mascota->peso)" required autofocus autocomplete="peso" />
             <x-input-error class="mt-2" :messages="$errors->get('peso')" />
         </div>
         <div class="flex items-center gap-4">
