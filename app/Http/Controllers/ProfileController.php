@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\Rols;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,9 +21,9 @@ class ProfileController extends Controller
     {
         // Obtener todos los usuarios
         $users = User::all();
-
+        $roles = Rols::all();
         // Pasar los usuarios a la vista
-        return view('administrador.mainAdm', compact('users'));
+        return view('administrador.mainAdm', compact('users','roles'));
     }
     public function edit(Request $request): View
     {
@@ -46,7 +47,15 @@ class ProfileController extends Controller
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
-
+    public function updateRols(Request $request, User $user){
+        $request->validate([
+            'rols_id'=>'required|exists:roles,id',
+        ]);
+        $user->rols_id = $request->rols_id;
+        $user->save();
+        return view('administrador.mainAdm');
+    }
+    
     /**
      * Delete the user's account.
      */

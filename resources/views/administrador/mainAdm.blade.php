@@ -11,9 +11,22 @@
         <tbody>
             @foreach ($users as $user )
                 <tr>
-                <th>{{$user->name}}</th>
-                <th>{{$user->email}}</th>
-                <th>{{$user->rols_id}}</th>
+                    <th>{{$user->name}}</th>
+                    <th>{{$user->email}}</th>
+                    <td>
+                        <form action="{{route('roles.update',$user->id)}} "method="POST">
+                            @csrf
+                            @method('PUT')
+                            <select name="rols_id" onchange="this.form.submit()">
+                                @foreach ($roles as $role )
+                              
+                                    <option value="{{$role->id}}"{{$user->rols_id == $role->id ? 'selected' : ""}}>
+                                        {{$role->nombre}}
+                                    </option>                            
+                                @endforeach
+                            </select>
+                        </form>
+                    </td>
                 </tr>            
             @endforeach
         </tbody>

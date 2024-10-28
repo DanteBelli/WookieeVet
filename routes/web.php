@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//Roles
+Route::get('/roles/{user}',[ProfileController::class,'updateRols'])->name('roles.update');
+
 
 //Mascotas
 Route::get('dashboard/mascotas/create',[MascotaController::class,'create'])->name('mascotas.create');
@@ -47,9 +50,6 @@ Route::get('/mascotas/create/getRazaPorTipo/{tipos}', [MascotaController::class,
 Route::patch('mascotas/{id}',[MascotaController::class,'update'])->name('mascotas.update');
 
 //Administrador
-Route::get('/administrador/mainAdm', function () {
-    return view('administrador.mainAdm');
-})->name('administrador.mainAdm');
-Route::middleware(['auth'])->group(function(){
-    Route::get('/administrador/mainAdm',[ProfileController::class,'index'])->name('admin.users');
+Route::middleware(['auth'])->group(function() {
+    Route::get('/administrador/mainAdm', [ProfileController::class, 'index'])->name('administrador.mainAdm');
 });
