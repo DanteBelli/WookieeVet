@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('observaciones', function (Blueprint $table) {
             $table->id();
+            $table->text('observacion');
+            $table->foreignId('iduser');
+            $table->foreign('iduser')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('idmascota');
+            $table->foreign('idmascota')->references('id')->on('mascotas')->onDelete('cascade');
             $table->timestamps();
         });
     }
