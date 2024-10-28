@@ -16,10 +16,8 @@
                     <td>
                         <form action="{{route('roles.update',$user->id)}} "method="POST">
                             @csrf
-                            @method('PUT')
                             <select name="rols_id" onchange="this.form.submit()">
                                 @foreach ($roles as $role )
-                              
                                     <option value="{{$role->id}}"{{$user->rols_id == $role->id ? 'selected' : ""}}>
                                         {{$role->nombre}}
                                     </option>                            

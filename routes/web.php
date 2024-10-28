@@ -36,8 +36,7 @@ Route::middleware('auth')->group(function () {
 });
 
 //Roles
-Route::get('/roles/{user}',[ProfileController::class,'updateRols'])->name('roles.update');
-
+Route::post('/users/{user}/updateRols', [ProfileController::class, 'updateRols'])->name('roles.update');
 
 //Mascotas
 Route::get('dashboard/mascotas/create',[MascotaController::class,'create'])->name('mascotas.create');

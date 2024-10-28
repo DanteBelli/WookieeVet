@@ -48,12 +48,9 @@ class ProfileController extends Controller
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
     public function updateRols(Request $request, User $user){
-        $request->validate([
-            'rols_id'=>'required|exists:roles,id',
-        ]);
         $user->rols_id = $request->rols_id;
         $user->save();
-        return view('administrador.mainAdm');
+        return redirect('administrador/mainAdm');
     }
     
     /**
