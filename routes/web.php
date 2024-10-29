@@ -59,4 +59,5 @@ Route::middleware('auth')->group( function(){
     Route::get('/observacion/create',[ObservacionController::class , 'index'])->name('observacion.create');
     Route::post('/observaciones/create', [ObservacionController::class, 'store'])->name('observacione.store');
     Route::get('/observacion/consulta',[ObservacionController::class , 'select'])->name('observacione.select');
+    Route::get('/observaciones/{idmascota}',[ObservacionController::class , 'getObs']);
 });

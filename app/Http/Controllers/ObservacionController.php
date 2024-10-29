@@ -26,8 +26,13 @@ class ObservacionController extends Controller
         
     }
     public function select(){
+        $mascotas = Mascota::all();
         $observaciones = Observacione::all();
-        return view('observacion.consulta',compact('observaciones'));
+        return view('observacion.consulta',compact('mascotas','observaciones'));
+    }
+    public function getObs($idmascota){
+        $observaciones = Observacione::where('idmascota' , $idmascota)->get();
+        return response()->json($observaciones);
     }
     /**
      * Store a newly created resource in storage.
