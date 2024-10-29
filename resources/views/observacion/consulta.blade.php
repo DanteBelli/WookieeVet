@@ -48,6 +48,7 @@
                         });
                     } else {
                         container.textContent = 'No hay observaciones para esta mascota.';
+                        container.style.color = 'white'; 
                     }
                 })
                 .catch(error => console.error('Error:', error));
