@@ -42,7 +42,7 @@
                     if (data.length > 0) {
                         data.forEach(obs => {
                             const observationElement = document.createElement('div');
-                            observationElement.textContent = obs.descripcion;
+                            observationElement.textContent = obs.observacion;
                             observationElement.style.color ='white';
                             container.appendChild(observationElement);
                         });
