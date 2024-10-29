@@ -37,6 +37,7 @@ class ObservacionController extends Controller
             'idmascota'=>'required|integer',
         ]);
         $data = $request->all();
+        $data['iduser'] = auth()->id();
         Observacione::create($data);
         return redirect()->route('observacion.create')->with('Exito','Observacion Agregada Correctamente');
     }

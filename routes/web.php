@@ -57,4 +57,6 @@ Route::middleware(['auth'])->group(function() {
 //Veterinario
 Route::middleware('auth')->group( function(){
     Route::get('/observacion/create',[ObservacionController::class , 'index'])->name('observacion.create');
+    Route::post('/observaciones/create', [ObservacionController::class, 'store'])->name('observacione.store');
+
 });
