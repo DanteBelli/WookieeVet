@@ -1,7 +1,6 @@
 <x-app-layout>
     <form method="POST" action="{{ route('observacione.select') }}">
         @csrf
-
         <!-- Mascota -->
         <div class="mt-4">
             <x-input-label for="idmascota" :value="__('Mascota')" />
@@ -13,7 +12,6 @@
             </select>
             <x-input-error :messages="$errors->get('idmascota')" class="mt-2" />
         </div>
-
         <!-- Observaciones -->
         <div class="mt-4">
             <x-input-label for="observaciones" :value="__('Observaciones')" />
@@ -21,15 +19,12 @@
                 <!-- Aca cargo obs-->
             </div>
         </div>
-
     </form>
-
     <script>
     document.getElementById('idmascota').addEventListener('change', function() {
         const idmascota = this.value;
         const container = document.getElementById('observaciones-container');
         container.innerHTML = '';
-
         if (idmascota) {
             fetch(`/observaciones/${idmascota}`)
                 .then(response => {
