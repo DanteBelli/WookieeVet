@@ -25,7 +25,10 @@ class ObservacionController extends Controller
     {
         
     }
-
+    public function select(){
+        $observaciones = Observacione::all();
+        return view('observacion.consulta',compact('observaciones'));
+    }
     /**
      * Store a newly created resource in storage.
      */
@@ -33,7 +36,6 @@ class ObservacionController extends Controller
     {
         $request->validate([
             'observacion'=>'required|string',
-            'iduser'=>'required|integer',
             'idmascota'=>'required|integer',
         ]);
         $data = $request->all();
