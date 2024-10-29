@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Observacione;
 use Illuminate\Http\Request;
+use App\Models\Mascota;
 
 class ObservacionController extends Controller
 {
@@ -11,7 +13,9 @@ class ObservacionController extends Controller
      */
     public function index()
     {
-        //
+        $mascotas = Mascota::all();
+        return view('observacion.create', compact('mascotas'));
+
     }
 
     /**
@@ -19,7 +23,7 @@ class ObservacionController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -27,7 +31,14 @@ class ObservacionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'observacion'=>'required|string',
+            'iduser'=>'required|integer',
+            'idmascota'=>'required|integer',
+        ]);
+        $data = $request->all();
+        Observacione::create($data);
+        return redirect()->route('observacion.create')->with('Exito','Observacion Agregada Correctamente');
     }
 
     /**
@@ -35,7 +46,7 @@ class ObservacionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
     }
 
     /**

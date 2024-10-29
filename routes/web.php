@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MascotaController;
+use App\Http\Controllers\ObservacionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,4 +52,9 @@ Route::patch('mascotas/{id}',[MascotaController::class,'update'])->name('mascota
 //Administrador
 Route::middleware(['auth'])->group(function() {
     Route::get('/administrador/mainAdm', [ProfileController::class, 'index'])->name('administrador.mainAdm');
+});
+
+//Veterinario
+Route::middleware('auth')->group( function(){
+    Route::get('/observacion/create',[ObservacionController::class , 'index'])->name('observacion.create');
 });

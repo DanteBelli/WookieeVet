@@ -17,10 +17,9 @@
                     <a href="{{ route('mascotas.edit') }}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Editar Mascotas
                     @break
                 @case(3)
-                    <p class="text-white">Veterinario</p>
+                    <a href="{{route('observacion.create')}}" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Agregar Observacion</a>
                     @break
                 @default
-                    <p class="text-white">Cliente</p>
             @endswitch
     @else
             <p class="text-white">No estás logueado.</p>
