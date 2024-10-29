@@ -18,7 +18,7 @@
         <div class="mt-4">
             <x-input-label for="observaciones" :value="__('Observaciones')" />
             <div id="observaciones-container">
-                <!-- Las observaciones se cargarán aquí -->
+                <!-- Aca cargo obs-->
             </div>
         </div>
 
