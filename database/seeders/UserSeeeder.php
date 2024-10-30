@@ -44,14 +44,16 @@ class UserSeeeder extends Seeder
             'apellido'=>'Bell',
             'dni'=>14122437,
             'telefono'=>1115736485,
+            'rols_id'=>3,
         ]);
         $user3 = User::create([
             'name' =>'ProbandoAdmin',
             'password' =>'1234asdf',
-            'email'=>'probandAdmin@gmail.com',
+            'email'=>'proband@gmail.com',
             'apellido'=>'Bell',
             'dni'=>14122437,
             'telefono'=>1115736485,
+            'rols_id'=>1,
         ]);
     }
 }
