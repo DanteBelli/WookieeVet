@@ -36,5 +36,22 @@ class UserSeeeder extends Seeder
             'dni'=>14122427,
             'telefono'=>1115736485,
         ]);
+        
+        $user3 = User::create([
+            'name' =>'ProbandoVeterinario',
+            'password' =>'1234asdf',
+            'email'=>'probandVet3@gmail.com',
+            'apellido'=>'Bell',
+            'dni'=>14122437,
+            'telefono'=>1115736485,
+        ]);
+        $user3 = User::create([
+            'name' =>'ProbandoAdmin',
+            'password' =>'1234asdf',
+            'email'=>'probandAdmin@gmail.com',
+            'apellido'=>'Bell',
+            'dni'=>14122437,
+            'telefono'=>1115736485,
+        ]);
     }
 }

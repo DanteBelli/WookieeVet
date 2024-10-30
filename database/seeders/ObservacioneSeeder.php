@@ -15,7 +15,7 @@ class ObservacioneSeeder extends Seeder
     {
         $obs1 = Observacione::create([
             'observacion' =>'Obs nro1 con iduser5 , y idmascota 1',
-            'iduser'=>5,
+            'iduser'=>4,
             'idmascota'=>1,
         ]);
     }
