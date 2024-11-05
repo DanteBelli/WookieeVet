@@ -24,7 +24,7 @@
         <div class="mt-4">
             <div class="flex items-center justify-end mt-4">
                 <x-primary-button class="ms-4">
-                    {{ __('Agregar Mascota') }}
+                    {{ __('Agregar Observacion') }}
                 </x-primary-button>
             </div>
         </div>
